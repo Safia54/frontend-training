@@ -1,4 +1,4 @@
-# Animated fullscreen design
+# Responsive design
 
 ![Front-end exercice: Loading...](https://github.com/melanicolas/frontend-training/raw/master/02%20-%20Responsive%20design/designs/jpg/Design_GridLG.jpg)
 ![Front-end exercice: Loading...](https://github.com/melanicolas/frontend-training/raw/master/02%20-%20Responsive%20design/designs/jpg/Design_GridXS.jpg)
@@ -11,6 +11,8 @@ It is asked to slice the design above. All psd files are in the folder " designs
 This page should be consulted on the following browsers, Firefox (latest pc/mac), Chrome (latest pc/mac), Internet Explorer 11 and Edge.
 
 **When you're done, upload it!**
+
+https://safia54.github.io/frontend-training/02-Responsive_design/app/index.html
 
 
 ## Notes
