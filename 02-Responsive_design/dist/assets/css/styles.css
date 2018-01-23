@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
 .container--black {
@@ -30,9 +31,12 @@
 .container--white {
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(5, 20%); }
+  display: -ms-grid;
+  grid-template-columns: repeat(5, 20%);
+  -ms-grid-columns: 20% 20% 20% 20% 20%; }
   .container--white .logo {
     grid-column-start: 3;
+    -ms-grid-column: 3;
     margin: 20px 0 20px 30px; }
     @media (max-width: 1200px) {
       .container--white .logo {
@@ -45,6 +49,7 @@
         margin: 20px 0 20px -40px; } }
   .container--white .login1 {
     grid-column-start: 5;
+    -ms-grid-column: 5;
     background-color: #ff8200;
     border-radius: 50px;
     margin-top: 20px;
@@ -92,9 +97,11 @@
     padding-right: 50px;
     margin-top: 20px; }
     .container--whitesmoke .links p {
-      display: inline-block; }
-    .container--whitesmoke .links p:after {
-      content: "|"; }
+      display: inline-block;
+      margin: 0 4px 0 4px;
+      color: #b5b5b5; }
+    .container--whitesmoke .links a {
+      color: #b5b5b5; }
   .container--whitesmoke img {
     width: 100%;
     padding: 0 25px; }
@@ -161,6 +168,20 @@
       .container--green form input[type="password"] {
         margin-left: 29px !important;
         margin-bottom: 35px !important; } }
+  .container--green form input::placeholder {
+    /* Mozilla et Chrome */
+    color: #706a62;
+    font-size: 16px; }
+  .container--green form :-ms-input-placeholder {
+    /* IE11 */
+    color: #706a62;
+    font-size: 16px;
+    /*  Le padding ne fonctionne que sur IE11, pas sur les autres navigateurs car la fonctionalité est encore expérimentale */
+    padding: 0px 0px 10px 0px; }
+  .container--green form ::-webkit-input-placeholder {
+    /* Edge */
+    color: #706a62;
+    font-size: 16px; }
   .container--green form button {
     width: 31%;
     font-size: 14px; }

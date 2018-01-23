@@ -52,11 +52,14 @@ $ContainerHeigthXS : 791px !default;
 .container--white{
     background-color: white;
     display: grid;
+    display: -ms-grid; // IE11
     grid-template-columns: repeat(5, 20%);
+    -ms-grid-columns: 20% 20% 20% 20% 20%; // IE11
 
 
     .logo{
         grid-column-start: 3;
+        -ms-grid-column: 3; // IE11
         margin: 20px 0 20px 30px;
 
         @media (max-width: $DeviceWidthMD) {
@@ -73,6 +76,7 @@ $ContainerHeigthXS : 791px !default;
 
     .login1{
         grid-column-start: 5;
+        -ms-grid-column: 5; // IE11
         background-color: #ff8200;
         border-radius: 50px;
         margin-top: 20px;
@@ -131,9 +135,11 @@ $ContainerHeigthXS : 791px !default;
         
         p{
             display: inline-block;
+            margin: 0 4px 0 4px;
+            color: #b5b5b5;
         }
-        p:after{
-            content: "|";
+        a{
+            color: #b5b5b5;
         }
     }
 
@@ -218,6 +224,23 @@ $ContainerHeigthXS : 791px !default;
                 margin-bottom: 35px !important;
             }
         }
+
+    
+        input::placeholder { /* Mozilla et Chrome */
+            color: #706a62;
+            font-size: 16px;
+        }
+        :-ms-input-placeholder { /* IE11 */
+            color: #706a62;
+            font-size: 16px;
+            /*  Le padding ne fonctionne que sur IE11, pas sur les autres navigateurs car la fonctionalité est encore expérimentale */
+            padding: 0px 0px 10px 0px;
+        }
+        ::-webkit-input-placeholder { /* Edge */
+            color: #706a62;
+            font-size: 16px;
+        }
+
         button{
             width: 31%;
             font-size: 14px;
